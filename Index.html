@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+   <h1>Remote Access Help Center</h1>
+    <title>Remote Access Help Center</title>
+    <style>
+      body {
+            background-color: #3E4A56;
+            color: #F5F1E8;
+        }
+        .wifi-card .card-front {
+            background-color: #1F4E78;
+            color: white;
+        }
+        .vpn-card .card-front {
+            background-color: #2F6F6D;
+            color: white;
+        }
+        .slow-card .card-front {
+            background-color: #B7791F;
+            color: white;
+        }
+        .card-back {
+            background-color: #F8F6F1;
+            color: #1F2937;
+            border: 2px solid #8FB8D8;
+        }
+        .card {
+    width: 230px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+        }
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.card-back ol {
+    font-size: 15px;
+    line-height: 1.14;
+    padding-left: 22px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+}
+h1 {
+    text-align: center;
+    color: #1F2937;
+    background-color: #F3E9D2;
+    padding: 20px;
+    font-size: 42px;
+    margin: 0 0 30px 0;
+
+    border-bottom: 4px solid #8FB8D8;
+    border-radius: 12px;
+}
+.contact-support {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+.top-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.bottom-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.section-group > h2 {
+   text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.top-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.card-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.bottom-section {
+    margin-top: 40px;
+}
+.wifi-label,
+.vpn-label,
+.slow-label {
+    padding: 10px 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.wifi-label {
+    color: #1F4E78;
+    background-color: #E8F0F7;
+}
+.vpn-label {
+    color: #2F6F6D;
+    background-color: #E5F0EE;
+}
+.slow-label {
+    color: #B7791F;
+    background-color: #F7EEDC;
+}
+.long-card .card-back {
+    padding: 14px;
+}
+
+.long-card .card-back h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.long-card .card-back ol {
+    font-size: 15px;
+    line-height: 1.11;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.long-card .contact-support {
+    font-size: 13px;
+    line-height: 1.1;
+    bottom: 10px;
+}
+.section-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+    </style>
+<body>
+   <!-- Wi-Fi Troubleshooting Cards -->
+    <div class="top-row">
+      <!-- Wi-Fi card group -->
+       <div class="section-group">
+         <img src="images/wifi.png"
+         alt="Wi-Fi signal icon"
+         class="section-image">
+         <h2 class="wifi-label">Wi-Fi Troubleshooting</h2>
+         <div class="card-group">
+    <div class="card wifi-card" onclick="this.classList.toggle('flipped')">
+      <!-- Wi-Fi Connection Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>Wi-Fi Connection</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Check if your Wi-Fi is turned on.</li>
+               <li>Turn Wi-Fi off and on again.</li>
+               <li>Make sure airplane mode is off.</li>
+               <li>Find a spot closer to the router, for a stronger signal.</li>
+               <li>Restart your device.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+    </p>
+      </div>
+    </div>
+   </div>
+   <div class="card wifi-card" onclick="this.classList.toggle('flipped')">
+      <!-- Can't Connect to Wi-Fi Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>Can't Connect to Wi-Fi</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Make sure you select the correct Wi-Fi network.</li>
+               <li>Carefully re-enter your Wi-Fi password.</li>
+               <li>Forget the Wi-Fi network and re-add it.</li>
+               <li>Turn Wi-Fi off and on again.</li>
+               <li>Restart your device.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+    </p>
+      </div>
+    </div>
+   </div>
+   <div class="card wifi-card" onclick="this.classList.toggle('flipped')">
+      <!-- Connected to Wi-Fi but No Internet Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>Connected to Wi-Fi but No Internet</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Try accessing a website in a different browser.</li>
+               <li>Disconnect and reconnect to the Wi-Fi network.</li>
+               <li>Restart your device.</li>
+               <li>Check if another device can connect to the internet.</li>
+               <li>Restart you router/modem</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+    </p>
+      </div>
+    </div>
+   </div>
+   </div>
+   </div>
+   <div class="section-group">
+       <img src="images/vpn.png"
+         alt="VPN security icon"
+         class="section-image">
+      <!-- VPN Troubleshooting Cards -->
+      <h2 class="vpn-label">VPN Troubleshooting</h2>
+      <div class="card-group">
+    <div class="card vpn-card" onclick="this.classList.toggle('flipped')">
+      <!-- VPN Won't Connect Card --> 
+       <div class="card-inner">
+         <div class="card-front">
+            <h2>VPN Won't Connect</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Make sure you're have a stable Wi-Fi connection.</li>
+               <li>Close the VPN client and reopen it.</li>
+               <li>Verify that your choosing the correct VPN server.</li>
+               <li>Try connecting from a different location or device.</li>
+               <li>Restart your device.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+    </p>
+      </div>
+    </div>
+   </div>
+   <div class="card vpn-card long-card" onclick="this.classList.toggle('flipped')">
+      <!-- VPN Login or Authentication Issues Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>VPN Login or Authentication Issues</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Re-enter your username and password.</li>
+               <li>Make sure caps lock is off.</li>
+               <li>Check your internet connection.</li>
+               <li>Check to make sure your account is active and not locked.</li>
+               <li>Try connecting from a different location or device.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+      </p>
+      </div>
+      </div>
+   </div>
+   <div class="card vpn-card long-card" onclick="this.classList.toggle('flipped')">
+      <!-- VPN Connection Drops Frequently Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>VPN Connection Drops Frequently</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Check your internet connection and make sure it's stable.</li>
+               <li>Move closer to the Wi-Fi router, if possible.</li>
+               <li>Close any other applications that might be using the internet.</li>
+               <li>Try disconnecting and reconnecting to the VPN.</li>
+               <li>Restart your device and the VPN service.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+    </p>
+      </div>
+    </div>
+   </div>
+ </div>
+ </div>
+ </div>
+     <!-- Slow Internet Speed Cards -->
+    <div class="bottom-row">
+      <!-- Slow Internet Speed card group -->
+      <div class="section-group">
+          <img src="images/weak-signal.png"
+         alt="Weak internet connection icon"
+         class="section-image">
+         <h2 class="slow-label">Slow or dropped connection troubleshooting</h2>
+         <div class="card-group">
+      <div class="card slow-card long-card" onclick="this.classList.toggle('flipped')">
+         <!-- Slow Connection Speed Card -->
+         <div class="card-inner">
+            <div class="card-front">
+               <h2>Slow Connection Speed</h2>
+               <p>Click To Troubleshoot</p>
+            </div>
+            <div class="card-back">
+               <h2>Troubleshooting steps</h2>
+               <ol>
+                  <li>Close any unnecessary applications or browser tabs.</li>
+                  <li>Check for any downloads or uploads that might be using the internet.</li>
+                  <li>Move closer to the Wi-Fi router, if possible.</li>
+                  <li>Disconnect and reconnect to the Wi-Fi network.</li>
+                  <li>Restart your device.</li>
+               </ol>
+               <p class="contact-support">
+           Contact IT support if the issue persists.
+         </p>
+               </div>
+               </div>
+            </div>
+   <div class="card slow-card long-card" onclick="this.classList.toggle('flipped')">
+      <!-- Internet Keeps Disconnecting Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>Internet Keeps Disconnecting</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Check your Wi-Fi signal strength and move closer to the router if possible.</li>
+               <li>Turn Wi-fi off and on again.</li>
+               <li>Restart your device, and router if you have access to it.</li>
+               <li>Check if other devices are experiencing similar issues.</li>
+               <li>Check for outages in your area.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+      </p>
+   </div>
+   </div>
+   </div>
+   <div class="card slow-card long-card" onclick="this.classList.toggle('flipped')">
+      <!-- High Latency or Ping Issues Card -->
+      <div class="card-inner">
+         <div class="card-front">
+            <h2>High Latency or Ping Issues</h2>
+            <p>Click To Troubleshoot</p>
+         </div>
+         <div class="card-back">
+            <h2>Troubleshooting steps</h2>
+            <ol>
+               <li>Close any downloads, streams, or other bandwidth-intensive applications.</li>
+               <li>Move closer to the Wi-Fi route or use a wired connection if possible.</li>
+               <li>Disconnect any devices that might be using a lot of bandwidth that are not in use.</li>
+               <li>Restart your device and router if you have access to it.</li>
+               <li>Check for any network congestion or issues in your area.</li>
+            </ol>
+            <p class="contact-support">
+        Contact IT support if the issue persists.
+      </p>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+</body>
+</html>
